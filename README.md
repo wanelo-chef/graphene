@@ -1,6 +1,6 @@
 # Description
 
-Installs and configures Graphene. Uses git to grab the latest version.
+Installs and configures the Graphene graphing toolkit. Uses git to grab the latest version.
 
 # Requirements
 Platform:

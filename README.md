@@ -11,22 +11,22 @@ The following cookbooks are dependencies
 
 # Attributes
 ```ruby
-node[:graphene][:host]
+node[:graphene][:host], required: false
 ```
 The name of any Apache VirtualHosts for this installation. Defaults to "graphene"
 
 ```ruby
-node[:graphene][:host_aliases]
+node[:graphene][:host_aliases], required: false
 ```
 The names of any additional Apache ServerAliases for this installation. Defaults to nil
 
 ```ruby
-node[:graphene][:apache][:document_root]
+node[:graphene][:apache][:document_root], required: false
 ```
 Location to install graphene files. Defaults to /opt/graphite/webapp/graphene
 
 ```ruby
-node[:graphene][:apache][:port]
+node[:graphene][:apache][:port], required: false
 ```
 The installed Apache port. Defaults to 80.
 

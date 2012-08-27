@@ -1,22 +1,35 @@
-Description
-===========
-Installs and configures Graphene
+# Description
 
-Requirements
-============
+Installs and configures Graphene. Uses git to grab the latest version.
+
+# Requirements
 Platform:
   * Ubuntu 10.4
 
 The following cookbooks are dependencies
   * Graphite, Apache2, Git
 
-Attributes
-==========
-  * node[:graphene][:host] - name of Apache VirtualHost. Defaults to "graphene"
-  * node[:graphene][:host_aliases] - any additional ServerAliases? Defaults to nil
-  * node[:graphene][:apache][:document_root] - Location to install graphene files. Defaults to /opt/graphite/webapp/graphene
-  * node[:graphene][:apache][:port] - port of said Apache. Defaults to 80.
+# Attributes
+```ruby
+node[:graphene][:host]
+```
+The name of any Apache VirtualHosts for this installation. Defaults to "graphene"
 
-Usage
-=====
+```ruby
+node[:graphene][:host_aliases]
+```
+The names of any additional Apache ServerAliases for this installation. Defaults to nil
+
+```ruby
+node[:graphene][:apache][:document_root]
+```
+Location to install graphene files. Defaults to /opt/graphite/webapp/graphene
+
+```ruby
+node[:graphene][:apache][:port]
+```
+The installed Apache port. Defaults to 80.
+
+
+# Usage
 Simply include the recipe where you want Graphene installed

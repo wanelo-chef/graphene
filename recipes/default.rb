@@ -22,7 +22,7 @@ apache_site "graphene" do
 end
 
 execute "git graphene" do
-  command "#{node[:graphene][:git_executable] clone #{node[:graphene][:git_repo]} ./"
+  command "#{node[:graphene][:git_executable]} clone #{node[:graphene][:git_repo]} ./"
   cwd node[:graphene][:apache][:document_root]
   returns [ 0, 128 ]
 end

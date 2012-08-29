@@ -12,7 +12,7 @@ directory node[:graphene][:apache][:document_root] do
   group node['apache']['group']
 end
 
-template "/etc/apache2/sites-available/graphene" do
+template "#{node['apache']['dir']}/sites-available/graphene" do
   source "graphene-vhost.conf.erb"
   notifies :restart, resources(:service => "apache2")
 end

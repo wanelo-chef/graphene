@@ -4,7 +4,7 @@ Installs and configures the Graphene graphing toolkit.
 
 # Requirements
 Platform:
-  * Ubuntu 10.4
+  * Ubuntu 10.04, 12.04
 
 The following cookbooks are dependencies
   * Graphite, Apache2, Git
@@ -13,22 +13,22 @@ The following cookbooks are dependencies
 ```ruby
 node[:graphene][:host], required: false
 ```
-The name of any Apache VirtualHosts for this installation. Defaults to "graphene"
+The Apache VirtualHost for this installation. Defaults to `graphene`
 
 ```ruby
 node[:graphene][:host_aliases], required: false
 ```
-The names of any additional Apache ServerAliases for this installation. Defaults to nil
+The names of additional Apache ServerAliases. Defaults to `nil`
 
 ```ruby
 node[:graphene][:apache][:document_root], required: false
 ```
-Location to install graphene files. Defaults to /opt/graphite/webapp/graphene
+Location to install graphene files. Defaults to `/opt/graphite/webapp/graphene`
 
 ```ruby
 node[:graphene][:apache][:port], required: false
 ```
-The installed Apache port. Defaults to 80.
+The installed Apache port. Defaults to `80`
 
 
 # Usage

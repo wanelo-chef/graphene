@@ -13,12 +13,12 @@ The following cookbooks are dependencies
 ```ruby
 node[:graphene][:host], required: false
 ```
-The name of any Apache VirtualHosts for this installation. Defaults to `graphene`
+The Apache VirtualHost for this installation. Defaults to `graphene`
 
 ```ruby
 node[:graphene][:host_aliases], required: false
 ```
-The names of any additional Apache ServerAliases for this installation. Defaults to `nil`
+The names of additional Apache ServerAliases. Defaults to `nil`
 
 ```ruby
 node[:graphene][:apache][:document_root], required: false

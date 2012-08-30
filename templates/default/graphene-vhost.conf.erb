@@ -8,17 +8,17 @@
 # you will need to change all the occurances of /opt/graphite/
 # in this file to your chosen install location.
 
-<VirtualHost *:<%= node['graphene']['apache']['port'] %> >
-        ServerName <%= node['graphene']['host'] %>
-        <% if node['graphene']['host_aliases'] %>
-        ServerAlias <%= [*node['graphene']['host_aliases']].join " " %>
+<%= config = node['graphene']['apache'] %>
+
+<VirtualHost *:<%= config['port'] %> >
+        ServerName <%= config['host'] %>
+
+        <% if config['host_aliases'] %>
+        ServerAlias <%= [*config['host_aliases']].join " " %>
         <% end %>
-        DocumentRoot "<%= node['graphene']['apache']['document_root'] %>"
+
+        DocumentRoot "<%= config['document_root'] %>"
+
         ErrorLog /opt/graphite/storage/log/webapp/graphene-error.log
         CustomLog /opt/graphite/storage/log/webapp/graphene-access.log common
-
-        <Location "/media/">
-                SetHandler None
-        </Location>
-
 </VirtualHost>

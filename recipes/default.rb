@@ -21,8 +21,8 @@ apache_site "graphene" do
   notifies :restart, resources(:service => "apache2")
 end
 
-execute "git graphene" do
-  command "#{node['graphene']['git_executable']} clone #{node['graphene']['git_repo']} ./"
-  cwd node['graphene']['apache']['document_root']
-  returns [ 0, 128 ]
+git node['graphene']['apache']['document_root'] do
+  repository  node['graphene']['git_repo']
+  destination node['graphene']['apache']['document_root']
 end
+

@@ -5,9 +5,10 @@ Installs and configures the Graphene graphing toolkit.
 # Requirements
 Platform:
   * Ubuntu 10.04, 12.04
+  * Will probably work on most unices.
 
 The following cookbooks are dependencies
-  * Graphite, Apache2
+  * Apache2
 
 # Attributes
 ```

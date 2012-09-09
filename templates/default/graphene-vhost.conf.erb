@@ -8,7 +8,7 @@
 # you will need to change all the occurances of /opt/graphite/
 # in this file to your chosen install location.
 
-<%= config = node['graphene']['apache'] %>
+<% config = node['graphene']['apache'] %>
 
 <VirtualHost *:<%= config['port'] %> >
         ServerName <%= config['host'] %>
